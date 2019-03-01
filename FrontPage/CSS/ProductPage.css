@@ -1,0 +1,248 @@
+﻿.Table_Background {
+    /*background:url("Product_TableBackgroundImage.jpg") no-repeat center;*/
+    height: 512px;
+    width: 100%;
+    background: #000000; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #434343, #000000); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#Table::-webkit-scrollbar {
+    background-color: gainsboro;
+    border-radius: 8px;
+    width: 1em;
+}
+
+/*#Table::-webkit-scrollbar-track
+{
+    -webkit-box-shadow:
+}*/
+
+#Table::-webkit-scrollbar-thumb {
+    background-color: #800000;
+    border-radius: 8px;
+    outline: 1px solid slategrey;
+}
+#Table {
+    overflow-y: auto;
+    height: 300px;
+}
+
+
+.btn-search {
+    padding-right: 0;
+    background: black;
+    border-radius: 0;
+    color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #1c1c1c;
+}
+.highlighted {
+    background: #ff8d00
+}
+
+
+    .btn-search:link, .btn-search:visited 
+    {
+        color: #fff;
+    }
+
+    .btn-search:active, .btn-search:hover {
+        background: #1c1c1c;
+        color: #fff;
+    }
+
+.input-group 
+{
+    float:right;
+    width:30%;
+}
+.container 
+{
+    padding-top:5px;
+    float:right;
+    padding-right:50px;
+    
+}
+.Buttons_Ribbon_left {
+   
+    width: 50%;
+    height: 60px;
+    float: left;
+    background-color: black;
+}
+
+.Buttons_Ribbon_Right {
+    width: 50%;
+    height: 60px;
+    float: right;
+    background-color: black;
+    color: white;
+}
+
+#AddProductDesc_Btn {
+    margin-top: 2px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    height: 37px;
+    border-radius: 12px;
+}
+#ProductTable {
+    width: 85%;
+    color: black;
+    margin-left: 50px;
+    /*border: 1px solid #800000;*/
+}
+.table_buttons {
+    color: black;
+}
+
+
+#Addcartrow, #Addcarthead, #AddcartDDL {
+    background-color: black
+}
+th {
+    color: #FAEBD7;
+    text-align: center !important;
+        border: 1px solid #800000;
+    border-collapse: collapse;
+}
+
+td, tr {
+    color: #FAEBD7;
+    text-align: center;
+    border: 1px solid #800000;
+    border-collapse: collapse;
+}
+
+.table_buttons {
+    background:
+    /* On "top" */
+    repeating-linear-gradient( 45deg, transparent, transparent 10px, #ccc 10px, #ccc 20px ),
+    /* on "bottom" */
+    linear-gradient( to bottom, #eee, #999 );
+    border-radius: 5px;
+    border: 1px solid #800000;
+}
+.img-thumbnail
+{
+    width:100px;
+    height:100px;
+}
+#Product-popup 
+{
+    color: black;
+    
+}
+
+.popup_Txt
+{
+    border-radius:8px;
+}
+
+/* The Modal (background) */
+.AddproductModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+}
+.popup_Txt {
+    background: #FFEEEE; /* fallback for old browsers */
+    font-weight: bold;
+}
+/* Modal Content */
+.Productmodal-content {
+    margin-left: 500px;
+    background: #ADA996; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 250px;
+    border-radius: 10px;
+}
+
+.AddCartProductmodal-content 
+{
+    margin-left: 250px;
+    margin-top:150px;
+    background: #ADA996; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 700px;
+    height: 175px;
+    border-radius: 10px;
+}
+/* The Close Button */
+.close, .delclose {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+ .close:hover, .close:focus ,.delclose:hover ,.delclose:focus
+ {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+ }
+
+#Inventory_Txt 
+{
+    width:50px;
+}
+#Image_Upload 
+{
+    background: black;
+    /*display: table;*/
+    color: #fff;
+    border-radius:10px;
+    height:25px;
+    width:75px;
+}
+#File
+{
+    display: none;
+}
+#Submit_Btn, #Confirm_Btn, #Decline_Btn {
+    margin-left: 150px;
+    color: wheat;
+    background: #02111D;
+    border-radius: 10px;
+}
+#AddCartTable
+{
+    width:500px;
+    margin-left : 50px;
+    margin-top: 10px;
+    color:black;
+}
+
+#divtablerow 
+{
+    color:black;
+}
+
+#productno {
+    border-radius:25px;
+    background-color:yellow;
+}
+.tablepic
+{
+    width:75px;
+    height:75px;
+}

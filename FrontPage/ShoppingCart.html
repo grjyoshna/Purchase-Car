@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/shoppingCart.css" />
+</head>
+<body onload="shoppingCart()">
+    <div class="shopping-cart-ribbon">
+        <button type="button" class="shopping-cart-button" onclick="window.location.href='ProductPage.html'">
+            <span class="glyphicon glyphicon-shopping-cart"></span> Continute To Shopping
+        </button>
+        <button type="button" class="logout-button" onclick="testclear()">
+            <span class="glyphicon glyphicon-log-out"></span> Log Out
+        </button>
+    </div>
+    <main>
+        <!--Rendering contenteditable-->
+        <div >
+
+        </div>
+        <div>
+
+
+        </div>
+        <div>
+            <div class="shopping-cart">
+                <div class="shopping-labels">
+                    <ul>
+                        <li class="tablepic">Image</li>
+                        <li class="ProductName">ProductName</li>
+                        <li class="price">Price</li>
+                        <li class="Inventory"> Inventory</li>
+                        <li class="subtotal">Subtotal</li>
+                    </ul>
+
+                    <section id="ProductList"></section>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div id="shoppingproduct" style="float:left"></div>
+
+        <aside>
+            <table class="summary">
+                <thead class="summary-total-items">
+                    <tr>
+                        <td colspan="2">Order Summary</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="summary-subtotal">
+                        <td class="subtotal-title">Subtotal</td>
+                        <td class="subtotal-value final-value" id="cart-subtotal"></td>
+                    </tr>
+                    <tr class="tax">
+                        <td class="tax-title">Estimated Taxes & Fees</td>
+                        <td class="tax-value final-value" id="cart-tax"></td>
+                    </tr>
+                    <tr></tr>
+                    <tr class="summary-delivery">
+                        <td>Shipping</td>
+                        <td>
+                            <select name="delivery-collection" class="summary-delivery-selection" id="delivery" onchange="reCalculateCart()">
+                                <option value="0">Free Standard Shipping (4-7 business days) - $0.00</option>
+                                <option value="300">Express 2 Days Shipping - $300.00</option>
+                                <option value="500">Express Next Day Delivery - $500.00</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr class="summary-total">
+                        <td class="total-title">Total</td>
+                        <td class="total-value final-value" id="cart-total"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a class="purchase-order-convert" href="purchaseOrder.html">Convert to purchase order</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </aside>
+        <div id="Cart"></div>
+    </main>
+    <script src="JS/shoppingCart.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .btn-glyphicon {
+            padding: 8px;
+            background: #ffffff;
+            margin-right: 2px;
+        }
+
+        .icon-btn {
+            padding: 1px 15px 3px 2px;
+            border-radius: 50px;
+        }
+    </style>
+    <meta charset="utf-8" />
+    <link href="css/frontcss.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="Logo.png" />
+    <title>User Info</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body onload="loadPage()">
+    <div class="title"><img src="CSS/CarsLogo.png" /></div>
+    <div class="Buttons_Ribbon_left">
+        <br />
+        <input class="RibbonBtn" id="User_Btn" type="button" value="Users" onclick="window.location.href='Admin_User.html'" />
+        <input class="RibbonBtn" id="Company_Btn" type="button" value="Company" onclick="window.location.href='Company_page.html'" />
+        <input class="RibbonBtn" id="Product_Btn" type="button" value="Products" onclick="window.location.href='ProductPage.html'">
+    </div>
+    <div class="Buttons_Ribbon_Right">
+        <button type="button" class="Cart_Btn" id="shoppingCart" onclick="window.location.href='ShoppingCart.html'">
+            <span class="glyphicon glyphicon-shopping-cart"></span><span id="productno"></span> &nbsp;Shopping Cart
+        </button>
+        <button type="button" class="Logout_Btn" onclick="window.location.href='loginPage.html'">
+            <span class="glyphicon glyphicon-log-out"></span> Log out
+        </button>
+    </div>
+    <form action="" class="navbar-form navbar-right">
+        <div class="input-group">
+            <input type="Search" placeholder="Search by name..." id="myInput" class="form-control" onkeyup="search()" />
+            <div class="input-group-btn">
+                <button class="btn btn-info">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </div>
+        </div>
+    </form>
+
+    <div class="tab">
+        <div id="tableInfo"></div>
+    </div>
+    <script src="js/adminJS.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="CSS/ProjectCSS.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/ProductPage.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="Logo.png" />
+    <title>Product Info</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title></title>
+    <script async src="JS/ProductPage.js" type="text/javascript"></script>
+</head>
+<body onload="ProductPage()">
+    <div class="title"><img src="CSS/CarsLogo.png" /></div>
+    <div class="Buttons_Ribbon_left">
+        <br />
+        <input class="RibbonBtn" id="User_Btn" type="button" value="Users" onclick="window.location.href='Admin_User.html'" />
+        <input class="RibbonBtn" id="Company_Btn" type="button" value="Company" onclick="window.location.href='Company_page.html'" />
+        <input class="RibbonBtn" id="Product_Btn" type="button" value="Products" onclick="window.location.href='ProductPage.html'">
+    </div>
+    <div class="Buttons_Ribbon_Right">
+        <button type="button" class="Cart_Btn" id="shoppingCart" onclick="window.location.href='ShoppingCart.html'">
+            <span class="glyphicon glyphicon-shopping-cart"></span><span id="productno"></span> &nbsp;Shopping Cart
+        </button>
+        <button type="button" class="Logout_Btn" onclick="logout()">
+            <span class="glyphicon glyphicon-log-out"></span> Log out
+        </button>
+    </div>
+    <div class="Table_Background">
+        <div class="Buttons_Ribbon_right">
+            <div class="container">
+                <div class="input-group">
+                    <input id="ProductSearch_Txt" type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                        <button id="ProductSearch_Btn" class="btn btn-search" type="button" onclick="search()"><i class="fa fa-search fa-fw"></i> Search</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="Buttons_Ribbon_Left">
+            <button type="button" id="AddProductDesc_Btn" class="Add_Btn">
+                <span class="glyphicon glyphicon-plus"></span> Add Products
+            </button>
+        </div>
+        <div>
+            <br />
+            <br />
+            <div id="Table"></div>
+            <!--<table id='ProductTable'>
+            <tr>
+                <th>Image</th>
+                <th>Product Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Inventory</th>
+                <th>Supplier</th>
+                <th>Add</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>-->
+
+        </div>
+        <div id="ProductModal" class="AddproductModal">
+            <div class="Productmodal-content">
+                <span class="close">&times;</span>
+                <div id="Product-popup">
+                    Product Name:&nbsp; <input class="popup_Txt" id="ProductName_Txt" type="text" placeholder="Product Name" />
+                    <br /><br />
+                    Description: &nbsp; &nbsp; &nbsp;    <input class="popup_Txt" id="Description_Txt" type="text" placeholder="Description" />
+                    <br /><br />
+                    Price:    <input class="popup_Txt" id="Price_Txt" type="text" placeholder="Price" />
+                    <br /><br />
+                    Inventory: <br />  <input class="popup_Txt" id="Inventory_Txt" type="text" placeholder="20" />
+                    <br />
+                    <input class="popup_Txt" id="row_Txt" type="text" style="display:none" />
+                    <br />
+                    <br />
+                    <input id="Submit_Btn" type="button" value="Submit" onclick="Addproduct()" />
+                </div>
+            </div>
+        </div>
+        <div id="DeleteModal" class="AddproductModal">
+            <div class="Productmodal-content">
+                <span class="delclose" onclick="closeDelModel()">&times;</span>
+                <div id="Product-popup">
+                    <h5> Are your Sure You Want to Delete ?</h5>
+                    <input class="popup_Txt" id="delrow_Txt" type="text" style="display:none" />
+                    <br />
+                    <input id="Yes_Btn" type="button" value="Yes" class='table_buttons' onclick="DeleteProduct('',true)" /> &nbsp; &nbsp; <input id="No_Btn" type="button" class="delclos table_buttons" value="No" onclick="closeDelModel()" />
+                </div>
+            </div>
+        </div>
+        <div id="AddCartModal" class="AddproductModal">
+            <div class="AddCartProductmodal-content">
+                <span class="delclose" onclick="declineDelModel()">&times;</span>
+                <div id="Product-popup">
+                    <div id="AddCart"></div>
+                    <br />
+                    <input id="Confirm_Btn" type="button" value="Confirm" onclick="addCartConfirm()" /> &nbsp; <input id="Decline_Btn" type="button" value="Decline" onclick="declineDelModel()" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Company Page</title>
+   
+    <link href="css/Companypage.css" rel="stylesheet" type="text/css" />
+    <link href="css/Edit_popup.css" rel="stylesheet" type="text/css">
+    <link href="css/add.css" rel="stylesheet" type="text/css">
+    <link href="css/delete_popup.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="Logo.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="title"><img src="CSS/CarsLogo.png" /></div>
+    <div class="Buttons_Ribbon_left">
+        <br />
+        <input class="RibbonBtn" id="User_Btn" type="button" value="Users" onclick="window.location.href='Admin_User.html'" />
+        <input class="RibbonBtn" id="Company_Btn" type="button" value="Company" onclick="window.location.href='Company_page.html'" />
+        <input class="RibbonBtn" id="Product_Btn" type="button" value="Products" onclick="window.location.href='ProductPage.html'">
+    </div>
+    <div class="Buttons_Ribbon_Right">
+        <button type="button" class="Cart_Btn" id="shoppingCart" onclick="window.location.href='ShoppingCart.html'">
+            <span class="glyphicon glyphicon-shopping-cart"></span><span id="productno"></span> &nbsp;Shopping Cart
+        </button>
+        <button type="button" class="Logout_Btn" onclick="window.location.href='loginPage.html'">
+            <span class="glyphicon glyphicon-log-out"></span> Log out
+        </button>
+    </div>
+    <!--Main page-->
+    <div class="backgroundOfPage">
+
+        <!--Add button-->
+        <div class="Addonleft">
+            <button type="button" id="Add-btn" class="popup" onclick="add_popup()"> <span class="glyphicon glyphicon-plus" id="addicon"></span> Add Company</button>
+        </div>
+
+        <!--Search button-->
+        <div class="SearchonRight">
+            <div class="container">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="Searchinput-btn" placeholder="Search for...">
+                    <button type="button" id="Search-btn" class="btn btn-search" onclick="SearchFunction()"> <span class="glyphicon glyphicon-search" id="addicon"></span> Search </button>
+                </div>
+            </div>
+        </div>
+
+        <!--Table rendering-->
+        <div>
+            <table class="companyTable" style="width:1500px;">
+                <tr><td><div id="CompanyList"></div></td> </tr>
+            </table>
+        </div>
+
+
+
+    </div>
+
+
+    <!--Edit popup-->
+    <div id="popup">
+        <table class="popuptext" id="EditPopup">
+            <tr><td>Name:</td><td><input id="nametxt1" type="text" class="inputbuttons" /></td></tr>
+
+            <tr><td>Email:</td><td><input id="emailtxt1" type="text" class="inputbuttons" /></td></tr>
+
+            <tr><td>Phone</td><td><input id="phonetxt1" type="text" class="inputbuttons" /></tr>
+
+            <tr><td>Owner</td><td><input id="ownertxt1" type="text" class="inputbuttons" /></td></tr>
+
+            <tr><td>Street:</td><td><input id="streetxt1" type="text" class="inputbuttons" /></td></tr>
+
+            <tr><td>City:</td><td><input id="citytxt1" type="text" class="inputbuttons" /></td></tr>
+
+            <tr><td>State:</td><td><input id="statetxt1" type="text" class="inputbuttons" /></td></tr>
+
+            <tr><td>Country:</td><td><input id="countrytxt1" type="text" class="inputbuttons" /></td></tr>
+
+            <tr><td>DUNS:</td><td><input id="dunstxt1" type="text" class="inputbuttons" /></td></tr>
+
+            <tr><td>Type:</td><td><input id="typetxt1" type="text" class="inputbuttons" /></td></tr>
+
+            <tr>
+                <td><input id="updateBtn" type="button" value="Update" onclick="editHtmlTbleSelectedRow()" class="inputbuttons" /></td>
+                <td><input id="cancelBtn" type="button" value="Cancel" onclick="closePopupedit()" class="inputbuttons" /></td>
+            </tr>
+
+        </table>
+    </div>
+
+    <!--Add popup-->
+    <div id="popup">
+        <table class="popuptext" id="popup_addbtn">
+            <tr><td>Name:</td><td><input id="nametxt" type="text" class="inputbuttons" /></td></tr>
+
+            <tr><td>Email:</td><td><input id="emailtxt" type="text" class="inputbuttons" /></td></tr>
+
+            <tr><td>Phone</td><td><input id="phonetxt" type="text" class="inputbuttons" /></tr>
+
+            <tr><td>Owner</td><td><input id="ownertxt" type="text" class="inputbuttons" /></td></tr>
+
+            <tr><td>Street:</td><td><input id="streetxt" type="text" class="inputbuttons" /></td></tr>
+
+            <tr><td>City:</td><td><input id="citytxt" type="text" class="inputbuttons" /></td></tr>
+
+            <tr><td>State:</td><td><input id="statetxt" type="text" class="inputbuttons" /></td></tr>
+
+            <tr><td>Country:</td><td><input id="countrytxt" type="text" class="inputbuttons" /></td></tr>
+
+            <tr><td>DUNS:</td><td><input id="dunstxt" type="text" class="inputbuttons" /></td></tr>
+
+            <tr><td>Type:</td><td><input id="typetxt" type="text" class="inputbuttons" /></td></tr>
+
+            <tr>
+                <td> <input id="updateBtn" type="button" value="Add" onclick="addHtmlTableRow()" class="inputbuttons" /></td>
+                <td><input id="cancelBtn" type="button" value="Cancel" onclick="closeAddPopup()" class="inputbuttons" /></td>
+            </tr>
+
+        </table>
+    </div>
+
+    <script src="js/companyPage.js"></script>
+
+</body>
+</html>

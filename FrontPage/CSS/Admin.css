@@ -1,0 +1,24 @@
+﻿
+.custab {
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5% 0;
+    box-shadow: 3px 3px 2px #ccc;
+    transition: 0.5s;
+    width:800px;
+}
+
+.custab:hover {
+    box-shadow: 3px 3px 0px transparent;
+    transition: 0.5s;
+}
+.tab {
+    width: 500px;
+}
+.btn btn-info btn-xs {
+    background-color: darkblue;
+}
+.edit {
+    color: darkmagenta;
+    
+}

@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <title>Purchase Order</title>
+    <link rel="stylesheet" type="text/css" href="css/purchaseOrder.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="JS/shoppingCart.js"></script>
+</head>
+<body>
+
+    <div id="page-wrap">
+        <div id="header">Purchase Order &nbsp; &nbsp; <button type="submit"><a href="FrontPage.html"> Home </a></button></div>
+
+        <div id="user">
+            <div id="ship-from">Ship From: </div>
+            <div id="user-address">
+                CARZzz LLC
+                <br />2121 Holly Hall Street
+                <br />Houston, TX 77054
+                <br />Phone: (281) xxx-xxxx
+            </div>
+
+        </div>
+
+        <div id="customer">
+            <div id="ship-to">Ship To: </div>
+            <div id="customer-address">
+
+            </div>
+        </div>
+
+        <div style="clear:both"></div>
+        <div id="order-number">
+            <table id="meta">
+                <tr>
+                    <td class="meta-head">Purchase Order #</td>
+                    <td><div id="ponum"></div></td>
+                </tr>
+                <tr>
+                    <td class="meta-head">Date</td>
+                    <td><div id="date"></div></td>
+                </tr>
+                <tr>
+                    <td class="meta-head">Amount Due</td>
+                    <td><div class="due">$134540.00</div></td>
+                </tr>
+            </table>
+        </div>
+        <!--
+
+
+                <table id="items">
+
+                    <tr>
+                        <th>Item</th>
+                        <th>Description</th>
+                        <th>Unit Cost</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+
+                    <tr class="item-row">
+                        <td><div class="item-name">Honda Civic</div></td>
+                        <td><div class="description"></div></td>
+                        <td><div class="cost">$18000.00</div></td>
+                        <td><div class="qty">2</div></td>
+                        <td><span class="price">$36000.00</span></td>
+                    </tr>
+
+                    <tr class="item-row">
+                        <td><div class="item-name">Toyota Corolla</div></td>
+                        <td><div class="description"></div></td>
+                        <td><div class="cost">$22000.00</div></td>
+                        <td><div class="qty">4</div></td>
+                        <td><span class="price">$88000.00</span></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" class="blank"> </td>
+                        <td colspan="2" class="total-line">Subtotal</td>
+                        <td class="total-value"><div id="subtotal">$124000.00</div></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="blank"> </td>
+                        <td colspan="2" class="total-line">Taxes & Fees</td>
+                        <td class="total-value"><div id="paid">$0.00</div></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="blank"> </td>
+                        <td colspan="2" class="total-line">Total</td>
+                        <td class="total-value"><div id="total">$134540.00</div></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" class="blank"> </td>
+                        <td colspan="2" class="total-line balance">Balance Due</td>
+                        <td class="total-value balance"><div class="due">$134540.00</div></td>
+                    </tr>
+
+                </table>
+
+        -->
+        <div id="shoppingtable">
+
+        </div>
+        <div id="terms">
+            <h5>Terms</h5>
+            <div>NET 30 Days. Finance Charge of 1.5% will be made on unpaid balances after 30 days.</div>
+        </div>
+
+    </div>
+    
+    <script>window.onload = po();</script>
+</body>
+</html>
